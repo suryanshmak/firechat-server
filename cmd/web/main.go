@@ -17,7 +17,7 @@ type application struct {
 
 func main() {
 	port := flag.String("p", ":8080", "Which port should the server run?")
-	dsn := flag.String("dsn", "postgres://web:pass1234@locahost:5432/firechat", "PostgreSQL data source name")
+	dsn := flag.String("dsn", "postgres://web:secretpassword@locahost:5432/firechat", "PostgreSQL data source name")
 	flag.Parse()
 	infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
 	errorLog := log.New(os.Stderr, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile)
