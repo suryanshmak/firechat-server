@@ -9,8 +9,10 @@ import (
 
 func (app *application) routes() http.Handler {
 	router := chi.NewRouter()
-	router.Get("/", func(rw http.ResponseWriter, r *http.Request) {
-		fmt.Print("Hi")
-	})
+	router.Get("/", home)
 	return router
+}
+
+func home(rw http.ResponseWriter, r *http.Request) {
+	fmt.Print("data")
 }
